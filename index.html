@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/4ac1988500.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <article data-testid="test-profile-card">
+      <section id="bg-img">
+        <figure>
+          <img
+            src="https://res.cloudinary.com/dm1yn1zwj/image/upload/v1725378497/IMG_6144_2_m6mykq.jpg"
+            alt="User Avatar"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+      </section>
+
+      <main>
+        <header>
+          <h2 data-testid="test-user-name">Morris Emmanuel</h2>
+          <p>Oxdevmorris | Front-End Developer</p>
+        </header>
+
+        <p data-testid="test-user-bio">
+          Aspiring Frontend Developer fueled by challenges. I love pushing my
+          limits — because as they say, "you either make it or break it." I’m
+          still standing, so I guess I’m making it.
+        </p>
+
+        <div class="time">
+          Current Time (ms)
+          <p>
+            <span data-testid="test-user-time"></span>
+          </p>
+        </div>
+
+        <nav data-testid="test-user-social-links">
+          <h3>Connect with me</h3>
+          <ul>
+            <li>
+              <a
+                href="https://x.com/0xDevMorris"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+              >
+                <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/0xDevMorris"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+              >
+                <i class="fa-brands fa-square-github fa-2xl"></i
+              ></a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/emmanuelmorris/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+              >
+                <i class="fa-brands fa-square-linkedin fa-2xl"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="personality">
+          <section data-testid="test-user-hobbies">
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Researchs</li>
+              <li>Reading</li>
+              <li>Football</li>
+              <li>Cooking</li>
+              <li>Traveling</li>
+            </ul>
+          </section>
+
+          <section data-testid="test-user-dislikes">
+            <h3>Dislikes</h3>
+            <ul>
+              <li>Slow internet</li>
+              <li>Bullies</li>
+              <li>Snakes</li>
+              <li>Darkness</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
