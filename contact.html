@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="./index.html" class="nav">Profile</a></li>
+        <li><a href="./about.html" class="nav">About</a></li>
+        <li><a href="./contact.html" class="nav">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="flex-container">
+      <form class="contact-container" id="contactForm">
+        <h2>Contact Me</h2>
+
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          data-testid="test-contact-name"
+          aria-describedby="test-contact-error-name"
+        />
+        <div id="test-contact-error-name" class="error"></div>
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          data-testid="test-contact-email"
+          aria-describedby="test-contact-error-email"
+        />
+        <div id="test-contact-error-email" class="error"></div>
+
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          data-testid="test-contact-subject"
+          aria-describedby="test-contact-error-subject"
+        />
+        <div id="test-contact-error-subject" class="error"></div>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          rows="5"
+          data-testid="test-contact-message"
+          aria-describedby="test-contact-error-message"
+        ></textarea>
+        <div id="test-contact-error-message" class="error"></div>
+
+        <button type="submit" data-testid="test-contact-submit">
+          Send Message
+        </button>
+
+        <div
+          data-textid="test-contact-success"
+          id="test-contact-success"
+          class="success-message"
+          style="display: none"
+        ></div>
+      </form>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

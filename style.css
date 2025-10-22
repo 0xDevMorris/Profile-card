@@ -12,22 +12,56 @@ a {
   text-decoration: none;
 }
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.nav {
+  display: inline-block;
+  background-color: #ffb6c1;
+  color: #2b2a2a;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(185, 126, 126, 0.2);
+}
+
+.nav:hover {
+  background-color: #ff9eb3;
+  transform: translateY(-2px);
+}
+
+.nav:active {
+  background-color: #ff8aa1;
+  transform: scale(0.97);
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
+  font-family: "Noto Sans", sans-serif;
+  background-color: #e9e9e9;
+}
+
+#flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-bottom: 30px;
 }
 
 article[data-testid="test-profile-card"] {
-  background-color: rgb(243, 229, 229);
-  /* padding: 20px; */
+  background-color: #f3e5e5;
   width: 90%;
   max-width: 400px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(185, 126, 126, 0.1);
+  box-shadow: 0 4px 10px #b97e7e1a;
   text-align: center;
 }
 
@@ -35,29 +69,34 @@ article[data-testid="test-profile-card"] {
   background: url("https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=786")
     no-repeat center center/cover;
   width: 100%;
-  height: 120px;
+  height: 150px;
   border-radius: 15px 15px 0 0;
 }
 
 figure img {
-  width: 120px;
-  height: 120px;
+  margin-top: -85px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
   z-index: 2;
-  margin-top: 55px;
-}
-
-main {
-  padding-top: 5rem;
+  border: 6px solid white;
 }
 
 header {
-  margin-bottom: 20px;
+  margin: 20px;
+}
+
+header h2 {
+  font-size: 30px;
+}
+
+header p {
+  margin-top: 4px;
 }
 
 p[data-testid="test-user-bio"] {
-  margin: 0 20px;
+  margin: 0 10px;
+  line-height: 25px;
 }
 
 .time {
@@ -74,10 +113,6 @@ p[data-testid="test-user-bio"] {
 
 nav[data-testid="test-user-social-links"] {
   margin-bottom: 20px;
-}
-
-.fa-brands {
-  color: black;
 }
 
 nav ul {
@@ -107,8 +142,9 @@ nav ul {
   text-align: left;
   justify-content: space-between;
   margin: 10px 30px;
-  /* background-color: red; */
-  margin-bottom: 20px;
+  background-color: #ffc0cb48;
+  padding: 20px 20px;
+  box-shadow: 0 4px 10px rgba(185, 126, 126, 0.1);
 }
 
 .personality section ul {
@@ -127,67 +163,50 @@ nav ul {
     display: flex;
     flex-direction: column;
     max-width: 700px;
-    padding: 20px;
   }
 
-  #bg-img {
-    background: none;
-  }
-
-   figure img {
-    width: 150px;
-    height: 150px;
+  figure img {
+    height: 200px;
   }
 
   .personality {
-    justify-content: space-around;
-    margin-top: 30px;
+    display: block;
+    background-color: none;
+    padding: 0;
   }
 
-   main {
-    padding-top: 6rem;
+  section[data-testid="test-user-hobbies"],
+  section[data-testid="test-user-dislikes"] {
+    background-color: #ffc0cb48;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(185, 126, 126, 0.1);
   }
 }
 
 /* Laptop/Desktop Layout (900px and up) */
 @media (min-width: 900px) {
+  #flex-lg {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
+
   article[data-testid="test-profile-card"] {
-    min-width: 900px;
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
+    max-width: none;
+    width: 95vw;
+    margin-left: 30px;
   }
 
-  main > p{
-    padding-left: 20px;
-    text-align: left;
+  body {
+    display: block;
   }
 
-  nav ul {
-    justify-content: flex-start;
-    gap: 20px;
-  }
-
-  .personality {
-    margin-right: 50px;
-
+  header {
+    margin-top: 50px;
   }
 
   nav h3 {
-    text-align: left;
-    padding-left: 20px;
-  }
-
-  .personality {
-    justify-content: space-between;
-  }
-
-  main {
-    padding-top: 4rem;
-  }
-
-  figure img {
-    width: 150px;
-    height: 150px;
+    margin-top: 15px;
+    font-weight: 70px;
   }
 }

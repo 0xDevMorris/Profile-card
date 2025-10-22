@@ -10,6 +10,12 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <script
       src="https://kit.fontawesome.com/4ac1988500.js"
@@ -19,99 +25,111 @@
   </head>
 
   <body>
-    <article data-testid="test-profile-card">
-      <section id="bg-img">
-        <figure>
-          <img
-            src="https://res.cloudinary.com/dm1yn1zwj/image/upload/v1725378497/IMG_6144_2_m6mykq.jpg"
-            alt="User Avatar"
-            data-testid="test-user-avatar"
-          />
-        </figure>
-      </section>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="./index.html" class="nav">Profile</a></li>
+        <li><a href="./about.html" class="nav">About</a></li>
+        <li><a href="./contact.html" class="nav">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="flex-container">
+      <article data-testid="test-profile-card">
+        <div id="bg-img"></div>
+        <div id="flex-lg">
+          <section>
+            <figure>
+              <img
+                src="https://res.cloudinary.com/dm1yn1zwj/image/upload/v1725378497/IMG_6144_2_m6mykq.jpg"
+                alt="User Avatar"
+                data-testid="test-user-avatar"
+              />
+            </figure>
 
-      <main>
-        <header>
-          <h2 data-testid="test-user-name">Morris Emmanuel</h2>
-          <p>Oxdevmorris | Front-End Developer</p>
-        </header>
+            <header>
+              <h2 data-testid="test-user-name">Morris Emmanuel</h2>
+              <p>Oxdevmorris | Front-End Developer</p>
+            </header>
 
-        <p data-testid="test-user-bio">
-          i am an aspiring Frontend Developer fueled by challenges. I love
-          pushing my limits — because as they say, "you either make it or break
-          it." I’m still standing, so I guess I’m making it.
-        </p>
+            <p data-testid="test-user-bio">
+              I am an aspiring Frontend Developer fueled by challenges. I love
+              pushing my limits because as they say, "you either make it or
+              break it." I’m still standing, so I guess I’m making it.
+            </p>
 
-        <div class="time">
-          Current Time (ms)
-          <p>
-            <span data-testid="test-user-time"></span>
-          </p>
-        </div>
-
-        <nav data-testid="test-user-social-links">
-          <h3>Connect with me</h3>
-          <ul>
-            <li>
-              <a
-                href="https://x.com/0xDevMorris"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-twitter"
-              >
-                <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://github.com/0xDevMorris"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-github"
-              >
-                <i class="fa-brands fa-square-github fa-2xl"></i
-              ></a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.linkedin.com/in/emmanuelmorris/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-linkedin"
-              >
-                <i class="fa-brands fa-square-linkedin fa-2xl"></i
-              ></a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="personality">
-          <section data-testid="test-user-hobbies">
-            <h3>Hobbies</h3>
-            <ul>
-              <li>Researchs</li>
-              <li>Reading</li>
-              <li>Football</li>
-              <li>Cooking</li>
-              <li>Traveling</li>
-            </ul>
+            <div class="time">
+              Current Time (ms)
+              <p>
+                <span data-testid="test-user-time"></span>
+              </p>
+            </div>
           </section>
 
-          <section data-testid="test-user-dislikes">
-            <h3>Dislikes</h3>
-            <ul>
-              <li>Slow internet</li>
-              <li>Bullies</li>
-              <li>Snakes</li>
-              <li>Darkness</li>
-            </ul>
+          <section>
+            <nav data-testid="test-user-social-links">
+              <h3>Connect with me</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://x.com/0xDevMorris"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-twitter"
+                  >
+                    <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://github.com/0xDevMorris"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-github"
+                  >
+                    <i class="fa-brands fa-square-github fa-2xl"></i
+                  ></a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/emmanuelmorris/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-linkedin"
+                  >
+                    <i class="fa-brands fa-square-linkedin fa-2xl"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="personality">
+              <section data-testid="test-user-hobbies">
+                <h2 style="text-align: center">Hobbies</h2>
+                <ul>
+                  <li>Researchs</li>
+                  <li>Reading</li>
+                  <li>Football</li>
+                  <li>Cooking</li>
+                  <li>Traveling</li>
+                </ul>
+              </section>
+
+              <section data-testid="test-user-dislikes">
+                <h2 style="text-align: center">Dislikes</h2>
+                <ul>
+                  <li>Slow internet</li>
+                  <li>Bullies</li>
+                  <li>Snakes</li>
+                  <li>Darkness</li>
+                </ul>
+              </section>
+            </div>
           </section>
         </div>
-      </main>
-    </article>
+      </article>
 
-    <script src="script.js"></script>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
